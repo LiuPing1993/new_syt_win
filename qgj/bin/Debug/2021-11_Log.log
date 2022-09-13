@@ -1,0 +1,48 @@
+当前时间：2021/11/08 9:52:57
+异常信息：未能找到文件“D:\new_syt_win\qgj\bin\Debug\update.config”。
+异常对象：mscorlib
+调用堆栈：
+在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 Iyond.Utility.Config.LoadConfig(String file)
+   在 Iyond.Utility.AutoUpdater..ctor(String url)
+   在 qgj.updateClass.autoupdate() 位置 d:\new_syt_win\qgj\intramethod\updateClass.cs:行号 18
+   在 qgj.Program.Main() 位置 d:\new_syt_win\qgj\Program.cs:行号 58
+触发方法：Void WinIOError(Int32, System.String)
+
+当前时间：2021/11/19 10:44:34
+异常信息：未能找到文件“D:\new_syt_win\qgj\bin\Debug\update.config”。
+异常对象：mscorlib
+调用堆栈：
+在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 Iyond.Utility.Config.LoadConfig(String file)
+   在 Iyond.Utility.AutoUpdater..ctor(String url)
+   在 qgj.updateClass.autoupdate() 位置 d:\new_syt_win\qgj\intramethod\updateClass.cs:行号 18
+   在 qgj.Program.Main() 位置 d:\new_syt_win\qgj\Program.cs:行号 58
+触发方法：Void WinIOError(Int32, System.String)
+
+当前时间：2021/11/24 16:08:07
+异常信息：未能找到文件“D:\new_syt_win\qgj\bin\Debug\update.config”。
+异常对象：mscorlib
+调用堆栈：
+在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   在 System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   在 System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   在 Iyond.Utility.Config.LoadConfig(String file)
+   在 Iyond.Utility.AutoUpdater..ctor(String url)
+   在 qgj.updateClass.autoupdate() 位置 d:\new_syt_win\qgj\intramethod\updateClass.cs:行号 18
+   在 qgj.Program.Main() 位置 d:\new_syt_win\qgj\Program.cs:行号 58
+触发方法：Void WinIOError(Int32, System.String)
+
