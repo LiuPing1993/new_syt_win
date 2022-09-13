@@ -1,0 +1,14 @@
+D:\new_syt_win\self_syt\bin\Release\self_syt.exe.config
+D:\new_syt_win\self_syt\bin\Release\self_syt.exe
+D:\new_syt_win\self_syt\bin\Release\self_syt.pdb
+D:\new_syt_win\self_syt\obj\Release\self_syt.comui.keybard.KeyBoardBaseControl.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.comui.keybard.KeyBoardBtnControl.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.Form1.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.mainform.MainBaseControl.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.mainform.MainForm.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.mainform.MainTopBtnControl.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.mainform.MainTopControl.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.Properties.Resources.resources
+D:\new_syt_win\self_syt\obj\Release\self_syt.csproj.GenerateResource.Cache
+D:\new_syt_win\self_syt\obj\Release\self_syt.exe
+D:\new_syt_win\self_syt\obj\Release\self_syt.pdb
