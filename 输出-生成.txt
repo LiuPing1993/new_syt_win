@@ -1,0 +1,3 @@
+﻿1>------ 已启动清理:  项目: self_syt, 配置: Debug Any CPU ------
+1>C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets(4319,5): warning MSB3061: 无法删除文件“D:\new_syt_win\self_syt\obj\Debug\self_syt.exe”。文件“D:\new_syt_win\self_syt\obj\Debug\self_syt.exe”正由另一进程使用，因此该进程无法访问此文件。
+========== 清理:  成功 1 个，失败 0 个，跳过 0 个 ==========
