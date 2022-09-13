@@ -1,0 +1,1274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA3004A5-F151-4995-B06E-A54DEE62553F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qgj</RootNamespace>
+    <AssemblyName>qgj</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\qgj.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\AutoUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.15.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="configform\intraControl\beforeMouseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\beforeMouseControl.Designer.cs">
+      <DependentUpon>beforeMouseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\activate.cs" />
+    <Compile Include="loginform\login.cs" />
+    <Compile Include="newpay\newBarPayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newpay\newBarPayControl.Designer.cs">
+      <DependentUpon>newBarPayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newpay\newCashControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newpay\newCashControl.Designer.cs">
+      <DependentUpon>newCashControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newpay\toCreate.cs" />
+    <Compile Include="newTrade\order_list.cs" />
+    <Compile Include="other\baseRequest.cs" />
+    <Compile Include="other\baseRequestControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="other\baseRequestControl.Designer.cs">
+      <DependentUpon>baseRequestControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoAreaForm.Designer.cs">
+      <DependentUpon>AutoAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoMouseSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoMouseSetControl.Designer.cs">
+      <DependentUpon>AutoMouseSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoStepControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\AutoStepControl.Designer.cs">
+      <DependentUpon>AutoStepControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\beforeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\beforeControl.Designer.cs">
+      <DependentUpon>beforeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\comSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\comSetForm.Designer.cs">
+      <DependentUpon>comSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\couponControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coupon\couponControl.Designer.cs">
+      <DependentUpon>couponControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\CouponUseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coupon\CouponUseControl.Designer.cs">
+      <DependentUpon>CouponUseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\couponUseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coupon\couponUseDetailForm.Designer.cs">
+      <DependentUpon>couponUseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\couponUseItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coupon\couponUseItemControl.Designer.cs">
+      <DependentUpon>couponUseItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\couponUseListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="coupon\couponUseListControl.Designer.cs">
+      <DependentUpon>couponUseListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="coupon\couponUseSuccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coupon\couponUseSuccessForm.Designer.cs">
+      <DependentUpon>couponUseSuccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\scanHook.cs" />
+    <Compile Include="koubeiUseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="koubeiUseDetailForm.Designer.cs">
+      <DependentUpon>koubeiUseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="koubeiUseItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="koubeiUseItemControl.Designer.cs">
+      <DependentUpon>koubeiUseItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="koubeiUseListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="koubeiUseListControl.Designer.cs">
+      <DependentUpon>koubeiUseListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\barPayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\barPayControl.Designer.cs">
+      <DependentUpon>barPayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowCollectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowCollectForm.Designer.cs">
+      <DependentUpon>flowCollectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowDetailForm.Designer.cs">
+      <DependentUpon>flowDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowdetailitemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowdetailitemControl.Designer.cs">
+      <DependentUpon>flowdetailitemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowListControl.Designer.cs">
+      <DependentUpon>flowListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowListItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowListItemControl.Designer.cs">
+      <DependentUpon>flowListItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\flowtypeSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\flowtypeSelectControl.Designer.cs">
+      <DependentUpon>flowtypeSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member\addBalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member\addBalanceForm.Designer.cs">
+      <DependentUpon>addBalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member\addMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member\addMemberForm.Designer.cs">
+      <DependentUpon>addMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\CustomerDisplay.cs" />
+    <Compile Include="newTrade\orderListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\orderListControl.Designer.cs">
+      <DependentUpon>orderListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newTrade\orderListItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="newTrade\orderListItemControl.Designer.cs">
+      <DependentUpon>orderListItemControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OtherSetControl.Designer.cs">
+      <DependentUpon>OtherSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\DownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\DownloadForm.Designer.cs">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\ErrorMailClass.cs" />
+    <Compile Include="intramethod\ImageDrawRect.cs" />
+    <Compile Include="intramethod\keyboardClass.cs" />
+    <Compile Include="mainform\grandform\detailTitleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\grandform\detailTitleControl.Designer.cs">
+      <DependentUpon>detailTitleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member\membercodeinsertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="member\membercodeinsertControl.Designer.cs">
+      <DependentUpon>membercodeinsertControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="member\memberDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member\memberDetailForm.Designer.cs">
+      <DependentUpon>memberDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\NumControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="other\orderCollectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\orderCollectForm.Designer.cs">
+      <DependentUpon>orderCollectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\excelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\excelForm.Designer.cs">
+      <DependentUpon>excelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\component\discountHttpClass.cs" />
+    <Compile Include="intramethod\LPTClass.cs" />
+    <Compile Include="mainform\component\mainCouponInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\component\mainCouponInfoControl.Designer.cs">
+      <DependentUpon>mainCouponInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\component\mainStoreInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\component\mainStoreInfoControl.Designer.cs">
+      <DependentUpon>mainStoreInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\component\mainMemberInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\component\mainMemberInfoControl.Designer.cs">
+      <DependentUpon>mainMemberInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\component\memberConfirmControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\component\memberConfirmControl.Designer.cs">
+      <DependentUpon>memberConfirmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paipaibox\PaipaiBoxClass.cs" />
+    <Compile Include="paipaibox\PPApi.cs" />
+    <Compile Include="loginform\ProxySetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\ProxySetControl.Designer.cs">
+      <DependentUpon>ProxySetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\SkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\SkinForm.Designer.cs">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rawPrintClass.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="storeform\storeCollectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeform\storeCollectForm.Designer.cs">
+      <DependentUpon>storeCollectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\memberselectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\memberselectControl.Designer.cs">
+      <DependentUpon>memberselectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\mouseClass.cs" />
+    <Compile Include="other\branchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\branchForm.Designer.cs">
+      <DependentUpon>branchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\BaseSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\BaseSetControl.Designer.cs">
+      <DependentUpon>BaseSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\JointSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\JointSetControl.Designer.cs">
+      <DependentUpon>JointSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\activateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\activateControl.Designer.cs">
+      <DependentUpon>activateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\DataStruct.cs" />
+    <Compile Include="other\errorinformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\errorinformationForm.Designer.cs">
+      <DependentUpon>errorinformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\loginactivatebuttonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\loginactivatebuttonControl.Designer.cs">
+      <DependentUpon>loginactivatebuttonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\logininputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\logininputControl.Designer.cs">
+      <DependentUpon>logininputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\moneytypeSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\moneytypeSelectControl.Designer.cs">
+      <DependentUpon>moneytypeSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\orderdetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\orderdetailForm.Designer.cs">
+      <DependentUpon>orderdetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\orderlistdetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\orderlistdetailControl.Designer.cs">
+      <DependentUpon>orderlistdetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\orderstatusSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\orderstatusSelectControl.Designer.cs">
+      <DependentUpon>orderstatusSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\paytypeSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\paytypeSelectControl.Designer.cs">
+      <DependentUpon>paytypeSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\pagenumControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\pagenumControl.Designer.cs">
+      <DependentUpon>pagenumControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\PassWordSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\PassWordSetControl.Designer.cs">
+      <DependentUpon>PassWordSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\barcodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\barcodeControl.Designer.cs">
+      <DependentUpon>barcodeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\barinputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\barinputControl.Designer.cs">
+      <DependentUpon>barinputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\cardrecordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\cardrecordControl.Designer.cs">
+      <DependentUpon>cardrecordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\cashiermoneyinputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\cashiermoneyinputControl.Designer.cs">
+      <DependentUpon>cashiermoneyinputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\cashrecordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\cashrecordControl.Designer.cs">
+      <DependentUpon>cashrecordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\AreaSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configform\AreaSelectForm.Designer.cs">
+      <DependentUpon>AreaSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\confirmcancelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="other\confirmcancelControl.Designer.cs">
+      <DependentUpon>confirmcancelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\HttpClass.cs" />
+    <Compile Include="intramethod\hotkeyClass.cs" />
+    <Compile Include="configform\intraControl\HotKeySetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\HotKeySetControl.Designer.cs">
+      <DependentUpon>HotKeySetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\loadconfigClass.cs" />
+    <Compile Include="intramethod\MachineInfoClass.cs" />
+    <Compile Include="intramethod\savefileClass.cs" />
+    <Compile Include="loginform\loginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\loginControl.Designer.cs">
+      <DependentUpon>loginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\loginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginform\loginForm.Designer.cs">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\loginwaitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\loginwaitControl.Designer.cs">
+      <DependentUpon>loginwaitControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\dicountselectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\dicountselectControl.Designer.cs">
+      <DependentUpon>dicountselectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\bottomtitleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\bottomtitleControl.Designer.cs">
+      <DependentUpon>bottomtitleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\Defcolor.cs" />
+    <Compile Include="mainform\grandform\detailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\grandform\detailControl.Designer.cs">
+      <DependentUpon>detailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\grandform\gatherControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\grandform\gatherControl.Designer.cs">
+      <DependentUpon>gatherControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\grandform\memberControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\grandform\memberControl.Designer.cs">
+      <DependentUpon>memberControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\moneyshowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\moneyshowControl.Designer.cs">
+      <DependentUpon>moneyshowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\monyinputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\monyinputControl.Designer.cs">
+      <DependentUpon>monyinputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\NativeMethods.cs" />
+    <Compile Include="mainform\intraform\notdiscountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\notdiscountControl.Designer.cs">
+      <DependentUpon>notdiscountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\numpadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\numpadControl.Designer.cs">
+      <DependentUpon>numpadControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\paywayControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\paywayControl.Designer.cs">
+      <DependentUpon>paywayControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\recognitionClass.cs" />
+    <Compile Include="intramethod\pictureClass.cs" />
+    <Compile Include="other\printControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="other\printControl.Designer.cs">
+      <DependentUpon>printControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\payresultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\payresultControl.Designer.cs">
+      <DependentUpon>payresultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\PicAreaSelectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\PicAreaSelectControl.Designer.cs">
+      <DependentUpon>PicAreaSelectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\PicDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configform\PicDetailForm.Designer.cs">
+      <DependentUpon>PicDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\printClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="intramethod\PublicMethods.cs" />
+    <Compile Include="payform\scancodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\scancodeControl.Designer.cs">
+      <DependentUpon>scancodeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\cashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payform\cashierForm.Designer.cs">
+      <DependentUpon>cashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\intraControl\PicDetailSetControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configform\intraControl\PicDetailSetControl.Designer.cs">
+      <DependentUpon>PicDetailSetControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\SecurityClass.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="loginform\proxyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="loginform\proxyControl.Designer.cs">
+      <DependentUpon>proxyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\refunddetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\refunddetailControl.Designer.cs">
+      <DependentUpon>refunddetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\refundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payform\refundForm.Designer.cs">
+      <DependentUpon>refundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\refundresultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="payform\refundresultControl.Designer.cs">
+      <DependentUpon>refundresultControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\selectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="other\selectControl.Designer.cs">
+      <DependentUpon>selectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configform\SetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configform\SetForm.Designer.cs">
+      <DependentUpon>SetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payform\stopqueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payform\stopqueryForm.Designer.cs">
+      <DependentUpon>stopqueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeControl.Designer.cs">
+      <DependentUpon>storeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeDetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeDetailControl.Designer.cs">
+      <DependentUpon>storeDetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storedetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeform\storedetailForm.Designer.cs">
+      <DependentUpon>storedetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeEventControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeEventControl.Designer.cs">
+      <DependentUpon>storeEventControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storelistdetailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storelistdetailControl.Designer.cs">
+      <DependentUpon>storelistdetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeMemberInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeMemberInfoControl.Designer.cs">
+      <DependentUpon>storeMemberInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storemoneyinputControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storemoneyinputControl.Designer.cs">
+      <DependentUpon>storemoneyinputControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeshowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeshowControl.Designer.cs">
+      <DependentUpon>storeshowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storeform\storeuseingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="storeform\storeuseingControl.Designer.cs">
+      <DependentUpon>storeuseingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\SuspendedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\SuspendedForm.Designer.cs">
+      <DependentUpon>SuspendedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="summaryPrint.cs" />
+    <Compile Include="testclassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testclassForm.Designer.cs">
+      <DependentUpon>testclassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testcloseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="testcloseControl.Designer.cs">
+      <DependentUpon>testcloseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform\intraform\toptitleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainform\intraform\toptitleControl.Designer.cs">
+      <DependentUpon>toptitleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\typeClass.cs" />
+    <Compile Include="intramethod\UserClass.cs" />
+    <Compile Include="testsettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testsettingForm.Designer.cs">
+      <DependentUpon>testsettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\UrlClass.cs" />
+    <Compile Include="intramethod\updateClass.cs" />
+    <Compile Include="other\watermarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="other\watermarkTextBox.Designer.cs">
+      <DependentUpon>watermarkTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\zxingClass.cs" />
+    <Compile Include="other\WaterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="other\WaterTextBox.Designer.cs">
+      <DependentUpon>WaterTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="intramethod\ZipClass.cs" />
+    <Compile Include="inihelper.cs" />
+    <Compile Include="newpay\toPay.cs" />
+    <Compile Include="newpay\toQuery.cs" />
+    <Compile Include="untils\ComUntils.cs" />
+    <Compile Include="untils\LogHelpher.cs" />
+    <Compile Include="untils\OperaGraphics.cs" />
+    <EmbeddedResource Include="configform\intraControl\beforeMouseControl.resx">
+      <DependentUpon>beforeMouseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newpay\newBarPayControl.resx">
+      <DependentUpon>newBarPayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newpay\newCashControl.resx">
+      <DependentUpon>newCashControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\baseRequestControl.resx">
+      <DependentUpon>baseRequestControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\AutoAreaForm.resx">
+      <DependentUpon>AutoAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\AutoMouseSetControl.resx">
+      <DependentUpon>AutoMouseSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\AutoStepControl.resx">
+      <DependentUpon>AutoStepControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\beforeControl.resx">
+      <DependentUpon>beforeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\comSetForm.resx">
+      <DependentUpon>comSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\couponControl.resx">
+      <DependentUpon>couponControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\CouponUseControl.resx">
+      <DependentUpon>CouponUseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\couponUseDetailForm.resx">
+      <DependentUpon>couponUseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\couponUseItemControl.resx">
+      <DependentUpon>couponUseItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\couponUseListControl.resx">
+      <DependentUpon>couponUseListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coupon\couponUseSuccessForm.resx">
+      <DependentUpon>couponUseSuccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="koubeiUseDetailForm.resx">
+      <DependentUpon>koubeiUseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="koubeiUseItemControl.resx">
+      <DependentUpon>koubeiUseItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="koubeiUseListControl.resx">
+      <DependentUpon>koubeiUseListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\barPayControl.resx">
+      <DependentUpon>barPayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowCollectForm.resx">
+      <DependentUpon>flowCollectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowDetailForm.resx">
+      <DependentUpon>flowDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowdetailitemControl.resx">
+      <DependentUpon>flowdetailitemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowListControl.resx">
+      <DependentUpon>flowListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowListItemControl.resx">
+      <DependentUpon>flowListItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\flowtypeSelectControl.resx">
+      <DependentUpon>flowtypeSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member\addBalanceForm.resx">
+      <DependentUpon>addBalanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member\addMemberForm.resx">
+      <DependentUpon>addMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\orderListControl.resx">
+      <DependentUpon>orderListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newTrade\orderListItemControl.resx">
+      <DependentUpon>orderListItemControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherSetControl.resx">
+      <DependentUpon>OtherSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\DownloadForm.resx">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\grandform\detailTitleControl.resx">
+      <DependentUpon>detailTitleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member\memberDetailForm.resx">
+      <DependentUpon>memberDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\orderCollectForm.resx">
+      <DependentUpon>orderCollectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\excelForm.resx">
+      <DependentUpon>excelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\component\mainCouponInfoControl.resx">
+      <DependentUpon>mainCouponInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\component\mainStoreInfoControl.resx">
+      <DependentUpon>mainStoreInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\component\mainMemberInfoControl.resx">
+      <DependentUpon>mainMemberInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\component\memberConfirmControl.resx">
+      <DependentUpon>memberConfirmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\ProxySetControl.resx">
+      <DependentUpon>ProxySetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeCollectForm.resx">
+      <DependentUpon>storeCollectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\memberselectControl.resx">
+      <DependentUpon>memberselectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\branchForm.resx">
+      <DependentUpon>branchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\BaseSetControl.resx">
+      <DependentUpon>BaseSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\JointSetControl.resx">
+      <DependentUpon>JointSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\activateControl.resx">
+      <DependentUpon>activateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\errorinformationForm.resx">
+      <DependentUpon>errorinformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\loginactivatebuttonControl.resx">
+      <DependentUpon>loginactivatebuttonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\logininputControl.resx">
+      <DependentUpon>logininputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\moneytypeSelectControl.resx">
+      <DependentUpon>moneytypeSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\orderdetailForm.resx">
+      <DependentUpon>orderdetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\orderlistdetailControl.resx">
+      <DependentUpon>orderlistdetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\orderstatusSelectControl.resx">
+      <DependentUpon>orderstatusSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\paytypeSelectControl.resx">
+      <DependentUpon>paytypeSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\pagenumControl.resx">
+      <DependentUpon>pagenumControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\PassWordSetControl.resx">
+      <DependentUpon>PassWordSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\barcodeControl.resx">
+      <DependentUpon>barcodeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\barinputControl.resx">
+      <DependentUpon>barinputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\cardrecordControl.resx">
+      <DependentUpon>cardrecordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\cashiermoneyinputControl.resx">
+      <DependentUpon>cashiermoneyinputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\cashrecordControl.resx">
+      <DependentUpon>cashrecordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\AreaSelectForm.resx">
+      <DependentUpon>AreaSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\confirmcancelControl.resx">
+      <DependentUpon>confirmcancelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\HotKeySetControl.resx">
+      <DependentUpon>HotKeySetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\loginControl.resx">
+      <DependentUpon>loginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\loginForm.resx">
+      <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\loginwaitControl.resx">
+      <DependentUpon>loginwaitControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\dicountselectControl.resx">
+      <DependentUpon>dicountselectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\bottomtitleControl.resx">
+      <DependentUpon>bottomtitleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\grandform\detailControl.resx">
+      <DependentUpon>detailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\grandform\gatherControl.resx">
+      <DependentUpon>gatherControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\grandform\memberControl.resx">
+      <DependentUpon>memberControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\moneyshowControl.resx">
+      <DependentUpon>moneyshowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\monyinputControl.resx">
+      <DependentUpon>monyinputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\notdiscountControl.resx">
+      <DependentUpon>notdiscountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\numpadControl.resx">
+      <DependentUpon>numpadControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\paywayControl.resx">
+      <DependentUpon>paywayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\printControl.resx">
+      <DependentUpon>printControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\payresultControl.resx">
+      <DependentUpon>payresultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\PicAreaSelectControl.resx">
+      <DependentUpon>PicAreaSelectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\PicDetailForm.resx">
+      <DependentUpon>PicDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\scancodeControl.resx">
+      <DependentUpon>scancodeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\cashierForm.resx">
+      <DependentUpon>cashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\intraControl\PicDetailSetControl.resx">
+      <DependentUpon>PicDetailSetControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginform\proxyControl.resx">
+      <DependentUpon>proxyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\refunddetailControl.resx">
+      <DependentUpon>refunddetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\refundForm.resx">
+      <DependentUpon>refundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\refundresultControl.resx">
+      <DependentUpon>refundresultControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\selectControl.resx">
+      <DependentUpon>selectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configform\SetForm.resx">
+      <DependentUpon>SetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payform\stopqueryForm.resx">
+      <DependentUpon>stopqueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeControl.resx">
+      <DependentUpon>storeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeDetailControl.resx">
+      <DependentUpon>storeDetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storedetailForm.resx">
+      <DependentUpon>storedetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeEventControl.resx">
+      <DependentUpon>storeEventControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storelistdetailControl.resx">
+      <DependentUpon>storelistdetailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeMemberInfoControl.resx">
+      <DependentUpon>storeMemberInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storemoneyinputControl.resx">
+      <DependentUpon>storemoneyinputControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeshowControl.resx">
+      <DependentUpon>storeshowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storeform\storeuseingControl.resx">
+      <DependentUpon>storeuseingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\SuspendedForm.resx">
+      <DependentUpon>SuspendedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testclassForm.resx">
+      <DependentUpon>testclassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testcloseControl.resx">
+      <DependentUpon>testcloseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform\intraform\toptitleControl.resx">
+      <DependentUpon>toptitleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testsettingForm.resx">
+      <DependentUpon>testsettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeMouseDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeMouseIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizeMouseDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizeMouseIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingMouseDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingMouseIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qgjTitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloginMouseDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloginMouseIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qgj.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register_x.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bordershadow .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_light_bkg_top123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qxtitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qxprinttitle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qxprinttitle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_su.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_su.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_su_line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
